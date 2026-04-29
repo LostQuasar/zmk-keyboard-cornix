@@ -19,10 +19,7 @@ config USB_DEVICE_STACK
 
 endif # USB
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+    default n
 
 config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
 	default y
