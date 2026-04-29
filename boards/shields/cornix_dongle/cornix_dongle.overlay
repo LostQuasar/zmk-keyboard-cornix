@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "cornix-layouts.dtsi"
+#include "cornix_sensors.dtsi"
 
 &layout_50 {
     transform = <&default_transform>;
