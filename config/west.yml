@@ -4,9 +4,13 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: LostQuasar
+      url-base: https://github.com/LostQuasar
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-component-adafruit-sharp
+      remote: LostQuasar
   self:
     path: config
