@@ -21,7 +21,7 @@ include:
   - board: cornix_left
     artifact-name: cornix_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-
+ 
   - board: cornix_right
     artifact-name: cornix_right
 

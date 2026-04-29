@@ -4,39 +4,12 @@
 # SPDX-License-Identifier: MIT
 
 ## Main device (left side)
-if BOARD_CORNIX_LEFT
-
-config ZMK_KEYBOARD_NAME
-	default "Cornix"
-
-if USB
-
-config USB_NRFX
-    default y
-
-config USB_DEVICE_STACK
-    default y
-
-endif # USB
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
-	default y
-
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
-	default y
-
-endif # BOARD_CORNIX_LEFT
-
 ## Peripheral device (right side)
-if BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_LEFT
+# Common options for both sides
+if BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default n
 
 # Add keyboard debouncing
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
@@ -44,14 +17,6 @@ config ZMK_KSCAN_DEBOUNCE_PRESS_MS
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
     default 3
 
-endif # BOARD_CORNIX_RIGHT
-
-# Common options for both sides
-if BOARD_CORNIX_LEFT  || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT
-
-
-#config BT_CTLR
-#    default BT
 
 config BOARD_CORNIX_CHARGER
     default y
@@ -67,7 +32,6 @@ config ZMK_RGB_UNDERGLOW
 	default n
 config ZMK_RGB_UNDERGLOW_EXT_POWER
 	default n
-    
+
 
 endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT
-# vim: set ft=kconfig:
