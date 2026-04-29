@@ -13,9 +13,14 @@
 #
 ---
 include:
-  - board: cornix_left
+  - board: xiao_ble//zmk
     snippet: studio-rpc-usb-uart
+    shield: cornix_dongle nice_view_adapter adafruit_sharp
+    cmake-args: -DCONFIG_ZMK_DISPLAY=y
+
+  - board: cornix_left
     artifact-name: cornix_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   - board: cornix_right
     artifact-name: cornix_right
